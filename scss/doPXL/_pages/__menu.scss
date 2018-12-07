@@ -1,5 +1,10 @@
 section.our-menu {
-  padding: 10px 0 50px;
+  padding: 10px 0 256px;
+  @include background(
+    $image: '../img/menu-bg.jpg',
+    $position: 'right bottom',
+    $repeat: 'no-repeat'
+  );
 
   h1.our-menu__title {
     margin-bottom: 0;
@@ -71,8 +76,4 @@ section.our-menu {
       font-weight: 300;
     }
   }
-}
-
-img.our-menu__graphic {
-  width: 100%;
 }

@@ -8,7 +8,7 @@ header.main-header {
 .main-header__container {
   @include flexible(
     $justify: 'between',
-    $items: 'center'
+    $items: 'start'
   );
   @include media('down', 878px) {
     display: block;

@@ -100,9 +100,9 @@ header.main-header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
   @media only screen and (max-width: 878px) {
     .main-header__container {
       display: block; } }
@@ -280,6 +280,9 @@ span.main-footer__copyright {
     span.main-footer__copyright {
       text-align: center; } }
 
+section.main-hero {
+  margin-top: -70px; }
+
 .main-hero__container {
   overflow: hidden; }
   .main-hero__container .flexible {
@@ -293,6 +296,7 @@ span.main-footer__copyright {
     align-items: center; }
   .main-hero__container h1 {
     margin: 0;
+    margin-top: 70px;
     padding-left: 100px;
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
     color: #000;
@@ -592,7 +596,10 @@ section.homepage__gallery {
         height: 500px; }
 
 section.our-menu {
-  padding: 10px 0 50px; }
+  padding: 10px 0 256px;
+  background-image: url(../img/menu-bg.jpg) ;
+  background-position: right bottom ;
+  background-repeat: no-repeat ; }
   section.our-menu h1.our-menu__title {
     margin-bottom: 0;
     text-align: center;
@@ -648,8 +655,5 @@ section.our-menu {
       margin-bottom: 0;
       font-size: 12px;
       font-weight: 300; }
-
-img.our-menu__graphic {
-  width: 100%; }
 
 /*# sourceMappingURL=app.css.map */

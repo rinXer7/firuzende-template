@@ -1,3 +1,7 @@
+section.main-hero {
+  margin-top: -70px;
+}
+
 .main-hero__container {
   overflow: hidden;
   .flexible {
@@ -9,6 +13,7 @@
 
   h1 {
     margin: 0;
+    margin-top: 70px;
     padding-left: 100px;
     text-shadow: 1px 3px 5px rgba(#000, .5);
     color: #000;
