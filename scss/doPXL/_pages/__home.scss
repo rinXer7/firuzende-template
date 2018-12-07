@@ -1,0 +1,375 @@
+.main-hero__container {
+  overflow: hidden;
+  .flexible {
+    @include flexible(
+      $items: 'center',
+      $wrap: 'wrap'
+    );
+  }
+
+  h1 {
+    margin: 0;
+    padding-left: 100px;
+    text-shadow: 1px 3px 5px rgba(#000, .5);
+    color: #000;
+    font: {
+      family: _font(2);
+      size: 72px;
+    }
+    -webkit-animation: slideToRight 1s ease alternate;
+    animation: slideToRight 1s ease alternate;
+    @-webkit-keyframes slideToRight {
+      from {
+        @include transform('translateX(-100%)');
+        @include visible(false);
+      } to {
+        @include transform('translateY(0px)');
+        @include visible(true);
+      }
+    }
+    @keyframes slideToRight {
+      from {
+        @include transform('translateX(-100%)');
+        @include visible(false);
+      } to {
+        @include transform('translateX(0px)');
+        @include visible(true);
+      }
+    }
+
+    @include media('down', 1200px) {
+      font-size: 48px;
+      padding-left: 0;
+    }
+    @include media('down', 767px) {
+      padding: 20px 20px 0;
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 100%;
+    -webkit-animation: slideToLeft 1s ease alternate;
+    animation: slideToLeft 1s ease alternate;
+    @-webkit-keyframes slideToLeft {
+      from {
+        @include transform('translateX(100%)');
+        @include visible(false);
+      } to {
+        @include transform('translateY(0px)');
+        @include visible(true);
+      }
+    }
+    @keyframes slideToLeft {
+      from {
+        @include transform('translateX(100%)');
+        @include visible(false);
+      } to {
+        @include transform('translateY(0px)');
+        @include visible(true);
+      }
+    }
+  }
+}
+
+
+section.newspaper-comments {
+  padding: 30px 0;
+  @include background(
+    $image: '../img/tçrtçklç-süerit.png',
+    $repeat: 'repeat-x',
+    $size: 'auto 100%',
+    $position: 'center'
+  );
+}
+
+.newspaper-comments_container {
+  text-align: center;
+
+  .owl-nav {
+    
+    button {
+      position: absolute;
+      top: 50%;
+      outline: 0;
+      @include transform('translateY(-50%)');
+
+      &.owl-prev {
+        left: 0;
+      }
+      &.owl-next {
+        right: 0;
+      }
+      &.disabled {
+        opacity: .5;
+      }
+
+      span {
+        color: #C78962;
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+.newspaper-comments_item {
+  text-align: center;
+  display: inline-block;
+  color: #000;
+  padding: 0 30px;
+
+  p {
+    font-size: 22px;
+  }
+
+  span {
+    display: block;
+    text-align: right;
+  }
+}
+
+section.our-picks {
+  padding: 50px 0;
+
+  h3.custom-section-heading {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+.our-picks__container {
+  position: relative;
+  padding: 0 50px;
+
+  @include media('down', 767px) {
+    padding: 0 20px;
+  }
+
+  .owl-nav {
+    
+    button {
+      position: absolute;
+      top: 50%;
+      outline: 0;
+      @include transform('translateY(-50%)');
+      
+
+      &.owl-prev {
+        left: 0;
+      }
+      &.owl-next {
+        right: 0;
+      }
+      &.disabled {
+        opacity: .5;
+      }
+
+      span {
+        color: #C78962;
+        font-size: 72px;
+
+        @include media('down', 767px) {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+}
+
+.our-picks__item {
+  @include transition(all, 500ms);
+  padding: 10px;
+
+  &:hover {
+    @include transform('translateY(-10px)');
+  }
+
+  figure {
+    text-align: center;
+
+    img {
+      display: inline-block !important;
+      width: auto !important;
+      height: 250px;
+
+      @include media('down', 767px) {
+        height: 150px;
+      }
+    }
+
+    figcaption {
+      margin-top: -125px;
+      padding: 175px 10px 20px;
+      background-color: #C58961;
+      border-radius: 10px;
+      border: 1px rgba(#000, .25) solid;
+      @include box-shadow(
+        $v: 5px,
+        $blur: 10px,
+        $spread: 3px,
+        $color: rgba(#000, .25)
+      );
+
+      @include media('down', 767px) {
+        margin-top: -75px;
+        padding-top: 100px;
+      }
+
+      p {
+        text-align: left;
+        color: rgba(#fff, .75);
+        margin-bottom: 0;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__nameAndPrice {
+    @include flexible(
+      $justify: 'between'
+    );
+    border-bottom: 1px rgba(#fff, .5) dashed;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+
+    @include media('down', 767px) {
+      display: block;
+    }
+
+    h4 {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: rgba(#fff, .75);
+      text-transform: uppercase;
+    }
+  }
+}
+
+section.res-section {
+  padding: 30px 0;
+  @include background(
+    $image: '../img/tçrtçklç-süerit.png',
+    $repeat: 'repeat-x',
+    $size: 'auto 100%',
+    $position: 'center'
+  );
+
+  p {
+    font-size: 20px;
+    margin-bottom: 0;
+    color: rgba(#000, .75);
+    text-align: center;
+
+    b {
+      font-weight: normal;
+      color: #000;
+    }
+
+    a {
+      color: #c58961;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+section.homepage__gallery {
+  padding: 30px 0;
+
+  h3.custom-section-heading {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.homepage__gallery__container {
+  padding: 0 50px;
+
+  @include media('down', 767px) {
+    padding: 0 20px;
+  }
+
+  .owl-nav {
+    
+    button {
+      position: absolute;
+      top: 50%;
+      outline: 0;
+      @include transform('translateY(-50%)');
+      
+
+      &.owl-prev {
+        left: 0;
+      }
+      &.owl-next {
+        right: 0;
+      }
+      &.disabled {
+        opacity: .5;
+      }
+
+      span {
+        color: #C78962;
+        font-size: 72px;
+
+        @include media('down', 767px) {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+}
+
+.homepage__gallery__column {
+  @include flexible(
+    $direction: 'column',
+    $justify: 'start'
+  );
+  margin-bottom: -10px;
+
+  &__item {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+
+    &.mb-0 {
+      margin-top: 0;
+    }
+
+    a {
+      display: block;
+      @include background(
+        $repeat: 'no-repeat',
+        $size: 'cover',
+        $position: 'center'
+      );
+      @include filter('sepia(100%)');
+      @include transition(all, 500ms);
+
+      &:hover {
+        @include filter('sepia(0)');
+        @include transform('scale(1.1)');
+      }
+
+      &.homepage__gallery__column__item-1 {
+        background-image: url(../img/gastroshot-firuzende-mekan-4-2.jpg);
+        height: 500px;
+      }
+      &.homepage__gallery__column__item-2 {
+        background-image: url(../img/gastroshot-firuzende-mekan-28.jpg);
+        height: 250px;
+      }
+      &.homepage__gallery__column__item-3 {
+        background-image: url(../img/gastroshot-firuzende-mekan-2.jpg);
+        height: 250px;
+      }
+      &.homepage__gallery__column__item-4 {
+        background-image: url(../img/gastroshot-firuzende-mekan-18.jpg);
+        height: 500px;
+      }
+    }
+  }
+}

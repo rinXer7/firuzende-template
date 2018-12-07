@@ -1,0 +1,30 @@
+* {
+	&,
+	&::before,
+	&::after {
+		@include box-sizing('border-box');
+	}
+}
+
+html {
+	@include wh100;
+}
+
+body {
+	background-color: #fff;
+	font-size: $font-size;
+	font-family: _font(1);
+	font-weight: 400;
+	color: _color('font');
+}
+
+a {
+	&,
+	&:link,
+	&:visited,
+	&:hover,
+	&:active, {
+		text-decoration: none;
+		color: _color('anchor');
+	}
+}
