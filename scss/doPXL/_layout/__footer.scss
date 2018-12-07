@@ -1,12 +1,16 @@
 footer.main-footer {
   background-color: #E7DED5;
   padding-bottom: 30px;
+  margin-top: 30px;
+  position: relative;
 
   &::before {
     content: '';
     display: block;
     height: 30px;
     width: 100%;
+    position: absolute;
+    top: -30px;
     @include background(
       $image: '../img/footer-bg.png',
       $repeat: 'repeat-x',

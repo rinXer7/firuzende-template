@@ -173,12 +173,16 @@ nav.main-header__navbar ul {
 
 footer.main-footer {
   background-color: #E7DED5;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  margin-top: 30px;
+  position: relative; }
   footer.main-footer::before {
     content: '';
     display: block;
     height: 30px;
     width: 100%;
+    position: absolute;
+    top: -30px;
     background-image: url(../img/footer-bg.png) ;
     background-position: center top ;
     background-size: auto cover ;
@@ -586,5 +590,66 @@ section.homepage__gallery {
       .homepage__gallery__column__item a.homepage__gallery__column__item-4 {
         background-image: url(../img/gastroshot-firuzende-mekan-18.jpg);
         height: 500px; }
+
+section.our-menu {
+  padding: 10px 0 50px; }
+  section.our-menu h1.our-menu__title {
+    margin-bottom: 0;
+    text-align: center;
+    color: #000;
+    font-family: 'Miama Regular', sans-serif;
+    font-size: 68px; }
+    section.our-menu h1.our-menu__title::after {
+      content: '';
+      display: block;
+      background-image: url(../img/title-img.jpg) ;
+      background-position: center ;
+      background-size: 100% ;
+      background-repeat: no-repeat ;
+      width: 150px;
+      height: 30px;
+      margin: 0 auto; }
+
+.our-menu__block {
+  padding-top: 30px; }
+  .our-menu__block__title {
+    color: #EB7A2E;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: -15px; }
+  .our-menu__block__item {
+    padding-top: 30px; }
+    .our-menu__block__item__head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-bottom: 1px rgba(0, 0, 0, 0.15) dashed;
+      padding-bottom: 5px;
+      margin-bottom: 5px; }
+      .our-menu__block__item__head h5 {
+        margin: 0;
+        text-transform: uppercase; }
+      .our-menu__block__item__head span {
+        display: block;
+        color: #C68861;
+        font-weight: 300;
+        font-size: 22px;
+        min-width: 60px;
+        line-height: normal;
+        text-align: right; }
+    .our-menu__block__item p {
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: 300; }
+
+img.our-menu__graphic {
+  width: 100%; }
 
 /*# sourceMappingURL=app.css.map */
